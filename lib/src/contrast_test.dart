@@ -38,7 +38,7 @@ extension MinimumAcceptableContrast on ReadabilityLevel {
 ///
 /// Example error message:
 ///
-/// ```
+/// ```plain
 /// 1.0:1 contrast ratio of Color(0xffffffff) and Color(0xffffffff)
 /// does not meet minimum acceptable contrast ratio
 /// for ReadabilityLevel.normal, which is 4.5:1.
@@ -80,6 +80,7 @@ void contrastTest(
 /// does not meet minimum acceptable contrast ratio
 /// for ReadabilityLevel.normal, which is 4.5:1.
 /// ```
+@visibleForTesting
 void runContrastTest(
   Color backgroundColor,
   Color foregroundColor, {

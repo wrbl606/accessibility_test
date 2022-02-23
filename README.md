@@ -8,7 +8,11 @@ range of people. Implemented contrast ratio rules follow [the WCAG 2.1 standard]
 Check an entire theme data your app uses:
 
 ```dart
-testTheme(themeData, accessibilityLevel: ThemeAccessibilityLevel.normal);
+testTheme(
+  'Theme accessibility test',
+  themeData,
+  accessibilityLevel: ThemeAccessibilityLevel.normal,
+);
 ```
 
 If any text-background pair does not meet a minimum contrast ratio requirement
@@ -29,7 +33,12 @@ Available theme accessibility levels:
 It is possible to create tests for specific background-text color combos:
 
 ```dart
-contrastTest(backgroundColor, textColor, readabilityLevel: ReadabilityLevel.normal);
+contrastTest(
+  'Contrast readability test',
+  backgroundColor,
+  textColor,
+  readabilityLevel: ReadabilityLevel.normal,
+);
 ```
 
 If the contrast ratio of given colors does not meet specified `readabilityLevel` minimum requirement, the test will fails with details about the issue, eg:
@@ -48,3 +57,14 @@ It's demanding design-wise but very accessible ([level AAA WCAG 2.1](https://www
 - normalLargeText - meant for text used as a title
 of a document or other headers ([level AAA WCAG 2.1](https://www.w3.org/TR/WCAG21/#contrast-enhanced) for large text).
 It's demanding design-wise but very accessible.
+
+## Disclaimer
+
+Passing tests included in this library does not make your app [WCAG 2.1]((https://www.w3.org/TR/WCAG21/)) compliant.
+This library provides only contrast checks, which is a small fraction of [WCAG 2.1]((https://www.w3.org/TR/WCAG21/)).
+
+Also, there are cases when even passing included tests does not confirm that your app
+have proper contrast ratios, since the app can overwrite given color values in runtime
+or could not use the theme data provided to the test function at all.
+
+The goal of this package is to make developing [WCAG 2.1]((https://www.w3.org/TR/WCAG21/)) compliant app easier, not automatic.

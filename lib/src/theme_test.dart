@@ -31,7 +31,7 @@ extension on ThemeAccessibilityLevel {
 ///
 /// Example error message:
 ///
-/// ```
+/// ```plain
 /// Contrast ratio of primaryColorLight (Color(0xffbbdefb))
 /// and primaryTextTheme.bodyLarge?.color (Color(0xffffffff)) is 1.40:1,
 /// which is not sufficient for specified ThemeAccessibilityLevel.normal.

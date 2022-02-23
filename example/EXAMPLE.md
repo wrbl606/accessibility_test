@@ -3,7 +3,11 @@ Example usage of `accessibility_test`.
 ## Theme test
 
 ```dart
-testTheme(themeData, accessibilityLevel: ThemeAccessibilityLevel.normal);
+testTheme(
+  'Theme accessibility test',
+  themeData,
+  accessibilityLevel: ThemeAccessibilityLevel.normal,
+);
 ```
 
 If any text-background pair does not meet a minimum contrast ratio requirement
@@ -17,7 +21,12 @@ for given `accessibilityLevel`, the test will fail with details about the issue,
 # Contrast test
 
 ```dart
-contrastTest(backgroundColor, textColor, readabilityLevel: ReadabilityLevel.normal);
+contrastTest(
+  'Contrast readability test',
+  backgroundColor,
+  textColor,
+  readabilityLevel: ReadabilityLevel.normal,
+);
 ```
 
 If the contrast ratio of given colors does not meet specified `readabilityLevel` minimum requirement, the test will fails with details about the issue, eg:
