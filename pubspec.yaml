@@ -1,0 +1,21 @@
+name: accessibility_test
+description: Automate accessibility checks.
+version: 0.0.1
+repository: https://github.com/wrbl606/accessibility_test
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  tuple: ^2.0.0
+  test: ^1.19.5
+  meta: ^1.7.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
