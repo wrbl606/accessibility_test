@@ -3,7 +3,7 @@ Example usage of `accessibility_test`.
 ## Theme test
 
 ```dart
-testTheme(
+themeTest(
   'Theme accessibility test',
   themeData,
   accessibilityLevel: ThemeAccessibilityLevel.normal,

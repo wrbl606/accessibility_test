@@ -8,7 +8,7 @@ range of people. Implemented contrast ratio rules follow [the WCAG 2.1 standard]
 Check an entire theme data your app uses:
 
 ```dart
-testTheme(
+themeTest(
   'Theme accessibility test',
   themeData,
   accessibilityLevel: ThemeAccessibilityLevel.normal,
